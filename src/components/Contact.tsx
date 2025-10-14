@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, MapPin, Github, Linkedin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { track } from '@vercel/analytics';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -48,6 +49,14 @@ const Contact = () => {
         );
         window.open(`mailto:vatsalbhavsar2011@gmail.com?subject=${subject}&body=${body}`);
         
+        // Track email client fallback usage
+        track('Contact Form Submitted', { 
+          method: 'Email Client Fallback',
+          reason: 'EmailJS not configured',
+          name: formData.name,
+          email: formData.email 
+        });
+        
         toast({
           title: "Email Client Opened",
           description: "Please send the email from your email client, or configure EmailJS for automatic sending.",
@@ -66,6 +75,13 @@ const Contact = () => {
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      // Track successful contact form submission
+      track('Contact Form Submitted', { 
+        method: 'EmailJS',
+        name: formData.name,
+        email: formData.email 
+      });
       
       toast({
         title: "Success!",
@@ -136,7 +152,14 @@ const Contact = () => {
                   variant="outline" 
                   size="lg" 
                   className="flex-1"
-                  onClick={() => window.open('https://github.com/Vatsal1805', '_blank')}
+                  onClick={() => {
+                    track('Social Link Clicked', { 
+                      platform: 'GitHub',
+                      url: 'https://github.com/Vatsal1805',
+                      section: 'Contact'
+                    });
+                    window.open('https://github.com/Vatsal1805', '_blank');
+                  }}
                 >
                   <Github className="w-5 h-5 mr-2" />
                   GitHub
@@ -145,7 +168,14 @@ const Contact = () => {
                   variant="outline" 
                   size="lg" 
                   className="flex-1"
-                  onClick={() => window.open('https://www.linkedin.com/in/vatsal-bhavsar-3b30092a7/', '_blank')}
+                  onClick={() => {
+                    track('Social Link Clicked', { 
+                      platform: 'LinkedIn',
+                      url: 'https://www.linkedin.com/in/vatsal-bhavsar-3b30092a7/',
+                      section: 'Contact'
+                    });
+                    window.open('https://www.linkedin.com/in/vatsal-bhavsar-3b30092a7/', '_blank');
+                  }}
                 >
                   <Linkedin className="w-5 h-5 mr-2" />
                   LinkedIn

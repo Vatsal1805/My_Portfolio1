@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
+import { track } from '@vercel/analytics';
 import profileImg from "@/assets/profile.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -67,14 +68,47 @@ I'll be happy to share my latest resume with you!`;
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-8">
-              <Button variant="hero" size="lg" onClick={() => scrollToSection("projects")} className="text-lg px-6 py-4">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                onClick={() => {
+                  track('Hero CTA Clicked', { 
+                    button: 'View Projects',
+                    destination: 'projects'
+                  });
+                  scrollToSection("projects");
+                }} 
+                className="text-lg px-6 py-4"
+              >
                 View Projects
               </Button>
-              <Button variant="outline" size="lg" onClick={handleResumeDownload} className="text-lg px-6 py-4 hover:bg-primary/10 border-primary/50 hover:border-primary group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={() => {
+                  track('Hero CTA Clicked', { 
+                    button: 'My Resume',
+                    destination: 'resume_download'
+                  });
+                  handleResumeDownload();
+                }} 
+                className="text-lg px-6 py-4 hover:bg-primary/10 border-primary/50 hover:border-primary group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+              >
                 <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 My Resume
               </Button>
-              <Button variant="outline" size="lg" onClick={() => scrollToSection("contact")} className="text-lg px-6 py-4 hover:bg-secondary/50">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={() => {
+                  track('Hero CTA Clicked', { 
+                    button: 'Contact Me',
+                    destination: 'contact'
+                  });
+                  scrollToSection("contact");
+                }} 
+                className="text-lg px-6 py-4 hover:bg-secondary/50"
+              >
                 Contact Me
               </Button>
             </div>
@@ -84,6 +118,11 @@ I'll be happy to share my latest resume with you!`;
                 href="https://github.com/Vatsal1805" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => track('Social Link Clicked', { 
+                  platform: 'GitHub',
+                  url: 'https://github.com/Vatsal1805',
+                  section: 'Hero'
+                })}
                 className="text-foreground hover:text-primary transition-colors p-2 hover:scale-110"
               >
                 <Github className="w-8 h-8 md:w-10 md:h-10" />
@@ -92,12 +131,25 @@ I'll be happy to share my latest resume with you!`;
                 href="https://www.linkedin.com/in/vatsal-bhavsar-3b30092a7/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => track('Social Link Clicked', { 
+                  platform: 'LinkedIn',
+                  url: 'https://www.linkedin.com/in/vatsal-bhavsar-3b30092a7/',
+                  section: 'Hero'
+                })}
                 className="text-foreground hover:text-primary transition-colors p-2 hover:scale-110"
               >
                 <Linkedin className="w-8 h-8 md:w-10 md:h-10" />
               </a>
               <a 
                 href="#contact"
+                onClick={() => {
+                  track('Social Link Clicked', { 
+                    platform: 'Email',
+                    url: '#contact',
+                    section: 'Hero'
+                  });
+                  scrollToSection("contact");
+                }}
                 className="text-foreground hover:text-primary transition-colors p-2 hover:scale-110"
               >
                 <Mail className="w-8 h-8 md:w-10 md:h-10" />

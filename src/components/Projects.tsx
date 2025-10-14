@@ -1,6 +1,7 @@
 import { ExternalLink, Github, Grid, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { track } from '@vercel/analytics';
 
 // Import project cover images
 import homeUtilityImage from "@/assets/projects/home-utility.svg";
@@ -180,14 +181,32 @@ const Projects = () => {
 
                 <div className="flex gap-3">
                   <Button variant="outline" size="sm" className="flex-1" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      onClick={() => track('Project Code Clicked', { 
+                        project: project.title,
+                        category: project.category,
+                        url: project.githubUrl
+                      })}
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </a>
                   </Button>
                   {project.liveUrl && project.liveUrl !== "#" ? (
                     <Button variant="outline" size="sm" className="flex-1" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a 
+                        href={project.liveUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={() => track('Project Demo Clicked', { 
+                          project: project.title,
+                          category: project.category,
+                          url: project.liveUrl
+                        })}
+                      >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Demo
                       </a>
@@ -213,7 +232,13 @@ const Projects = () => {
         {projects.length > 3 && (
           <div className="flex justify-center mt-16 animate-fade-in">
             <Button
-              onClick={() => setShowAllProjects(!showAllProjects)}
+              onClick={() => {
+                setShowAllProjects(!showAllProjects);
+                track('Projects Toggle Clicked', { 
+                  action: showAllProjects ? 'Show Less' : 'Show More',
+                  totalProjects: projects.length
+                });
+              }}
               variant="outline"
               size="lg"
               className="group px-8 py-4 text-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
