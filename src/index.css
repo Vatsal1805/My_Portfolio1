@@ -60,8 +60,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-base;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px; /* Increase base font size for better readability */
+    line-height: 1.7; /* Better line spacing */
   }
 
   html {
@@ -80,5 +82,48 @@ All colors MUST be HSL.
 
   .glow-effect {
     box-shadow: var(--shadow-glow);
+  }
+
+  /* Enhanced typography classes */
+  .section-title {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl text-muted-foreground leading-relaxed;
+  }
+
+  .card-title {
+    @apply text-2xl md:text-3xl font-semibold mb-4;
+  }
+
+  .card-text {
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+  }
+
+  /* Navbar animations */
+  .navbar-glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .nav-pill {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .nav-pill:hover::before {
+    left: 100%;
   }
 }

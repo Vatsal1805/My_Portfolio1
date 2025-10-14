@@ -1,0 +1,29 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#eab308;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#grad8)"/>
+  
+  <!-- Pinterest Cards -->
+  <rect x="50" y="30" width="60" height="80" fill="#ec4899" opacity="0.6" rx="8"/>
+  <rect x="120" y="40" width="50" height="60" fill="#eab308" opacity="0.5" rx="6"/>
+  <rect x="180" y="35" width="55" height="75" fill="#ec4899" opacity="0.4" rx="7"/>
+  <rect x="245" y="45" width="50" height="55" fill="#eab308" opacity="0.6" rx="6"/>
+  <rect x="305" y="30" width="60" height="85" fill="#ec4899" opacity="0.5" rx="8"/>
+  
+  <!-- Second row -->
+  <rect x="50" y="120" width="50" height="50" fill="#eab308" opacity="0.5" rx="6"/>
+  <rect x="110" y="110" width="60" height="70" fill="#ec4899" opacity="0.4" rx="7"/>
+  <rect x="180" y="120" width="55" height="60" fill="#eab308" opacity="0.6" rx="6"/>
+  <rect x="245" y="110" width="50" height="50" fill="#ec4899" opacity="0.5" rx="6"/>
+  <rect x="305" y="125" width="60" height="55" fill="#eab308" opacity="0.4" rx="7"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="30" cy="80" r="6" fill="#ec4899" opacity="0.3"/>
+  <circle cx="380" cy="90" r="8" fill="#eab308" opacity="0.3"/>
+  
+  <text x="200" y="195" font-family="Arial, sans-serif" font-size="14" fill="#ec4899" text-anchor="middle" opacity="0.8">Pinterest Cards</text>
+</svg>

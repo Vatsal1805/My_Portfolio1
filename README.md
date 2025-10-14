@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# Vatsal Bhavsar Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my skills as a Full-Stack Developer specializing in the MERN stack.
 
-**URL**: https://lovable.dev/projects/b334918c-e9db-4df9-83ba-8219b47fcc02
+## 🚀 Live Demo
 
-## How can I edit this code?
+Visit the live portfolio: [Your Portfolio URL]
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS + Custom CSS
+- **UI Components**: shadcn/ui + Radix UI
+- **Build Tool**: Vite
+- **Icons**: Lucide React
+- **Email Service**: EmailJS
+- **Animations**: CSS Transitions + Hover Effects
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b334918c-e9db-4df9-83ba-8219b47fcc02) and start prompting.
+## ✨ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Responsive Design** - Works perfectly on all devices
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Contact Form** - Functional contact form with email integration
+- **Resume Download** - Direct access to downloadable resume
+- **Project Showcase** - Highlighting key projects and technologies
+- **SEO Optimized** - Meta tags and proper structure for search engines
 
-**Use your preferred IDE**
+## 🎨 Sections
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Hero** - Introduction with call-to-action buttons
+- **About** - Professional background and highlights
+- **Skills** - Technical skills organized by category
+- **Projects** - Featured projects with descriptions and tech stacks
+- **Contact** - Contact form and professional links
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js (v16 or higher)
+- npm or yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. Clone the repository
+```bash
+git clone https://github.com/Vatsal1805/My_Portfolio1.git
+cd My_Portfolio1
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📧 Contact Form Setup
 
-## What technologies are used for this project?
+The contact form uses EmailJS for sending emails. To set it up:
 
-This project is built with:
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create an email service and template
+3. Update the environment variables in `.env.local`:
+   ```
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Detailed setup instructions are available in `CONTACT_SETUP.md`.
 
-## How can I deploy this project?
+## 📄 Resume Setup
 
-Simply open [Lovable](https://lovable.dev/projects/b334918c-e9db-4df9-83ba-8219b47fcc02) and click on Share -> Publish.
+To add your resume:
 
-## Can I connect a custom domain to my Lovable project?
+1. Place your PDF resume in `/public/resume/`
+2. Name it `Vatsal_Bhavsar_Resume.pdf`
+3. The download button will automatically work
 
-Yes, you can!
+## 🎨 Customization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Colors
+The color scheme can be modified in `src/index.css` using CSS custom properties:
+- Primary: `--primary` (currently red/orange gradient)
+- Background: `--background` 
+- Foreground: `--foreground`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Content
+Update the content in respective component files:
+- Hero: `src/components/Hero.tsx`
+- About: `src/components/About.tsx`
+- Skills: `src/components/Skills.tsx`
+- Projects: `src/components/Projects.tsx`
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contact
+
+**Vatsal Bhavsar**
+- Email: vatsalbhavsar2011@gmail.com
+- LinkedIn: [linkedin.com/in/vatsal-bhavsar-3b30092a7/](https://www.linkedin.com/in/vatsal-bhavsar-3b30092a7/)
+- GitHub: [github.com/Vatsal1805](https://github.com/Vatsal1805)
+
+---
+
+Built with ❤️ by Vatsal Bhavsar

@@ -20,16 +20,16 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-card">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="about" className="py-24 md:py-32 bg-card scroll-mt-20">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            I'm a passionate full-stack developer focused on building high-performance, 
-            user-centric web applications. I enjoy turning ideas into production-ready 
-            products through clean architecture, responsive UI, and optimized backend systems.
+          <p className="text-muted-foreground text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+           I’m a Full-Stack Developer specializing in the MERN stack, passionate about creating scalable and high-performance web applications. I focus on writing clean, maintainable code, designing responsive and intuitive user interfaces, and implementing real-time features to deliver seamless user experiences. By combining robust backend architecture with thoughtful front-end design, I transform ideas into production-ready solutions that solve real-world problems. <br/>
+           <br />
+          Let’s collaborate to build something amazing together!
           </p>
         </div>
 
@@ -40,11 +40,11 @@ const About = () => {
               className="bg-background p-6 rounded-lg border border-border hover-lift hover:border-primary/50 transition-all group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4">
-                <item.icon className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
+              <div className="mb-6">
+                <item.icon className="w-16 h-16 text-primary group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-muted-foreground">{item.description}</p>
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4">{item.title}</h3>
+              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>

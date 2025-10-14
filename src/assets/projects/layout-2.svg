@@ -1,0 +1,30 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#grad5)"/>
+  
+  <!-- Layout 2 - Card Layout -->
+  <rect x="80" y="40" width="240" height="100" fill="#a855f7" opacity="0.6" rx="8"/>
+  <rect x="90" y="50" width="220" height="6" fill="#ec4899" opacity="0.7" rx="3"/>
+  <rect x="90" y="65" width="160" height="4" fill="#a855f7" opacity="0.5" rx="2"/>
+  <rect x="90" y="75" width="180" height="4" fill="#ec4899" opacity="0.5" rx="2"/>
+  
+  <rect x="90" y="90" width="60" height="20" fill="#a855f7" opacity="0.4" rx="4"/>
+  <rect x="160" y="90" width="60" height="20" fill="#ec4899" opacity="0.4" rx="4"/>
+  <rect x="230" y="90" width="60" height="20" fill="#a855f7" opacity="0.3" rx="4"/>
+  
+  <rect x="90" y="120" width="220" height="3" fill="#ec4899" opacity="0.6" rx="2"/>
+  
+  <!-- Side elements -->
+  <circle cx="50" cy="80" r="12" fill="#a855f7" opacity="0.5"/>
+  <circle cx="350" cy="90" r="18" fill="#ec4899" opacity="0.4"/>
+  
+  <rect x="30" y="120" width="40" height="3" fill="#a855f7" opacity="0.6" rx="2"/>
+  <rect x="330" y="130" width="40" height="3" fill="#ec4899" opacity="0.5" rx="2"/>
+  
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="14" fill="#a855f7" text-anchor="middle" opacity="0.8">Layout 2</text>
+</svg>
