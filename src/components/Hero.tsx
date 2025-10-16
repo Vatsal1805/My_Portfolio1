@@ -6,40 +6,22 @@ import profileImg from "@/assets/profile.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
-  const handleResumeDownload = () => {
-    const resumeUrl = "/resume/Vatsal_Bhavsar_Resume.pdf";
+  const handleResumeView = () => {
+    // TODO: Replace this with your actual Google Drive link
+    const googleDriveResumeUrl = "https://docs.google.com/document/d/1UkUaNPdDT6ncLS-nDf_tTZnBJJsoCUPD/edit?usp=sharing&ouid=110460681303891691184&rtpof=true&sd=true";
     
-    // Create a temporary link to test if file exists
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
+    // For now, using a placeholder - you'll need to replace with your actual Google Drive link
+    const resumeUrl = googleDriveResumeUrl;
     
-    // Check if we can access the file
-    fetch(resumeUrl, { method: 'HEAD' })
-      .then(response => {
-        if (response.ok) {
-          // File exists, open it
-          window.open(resumeUrl, '_blank');
-        } else {
-          throw new Error('Resume file not found');
-        }
-      })
-      .catch(() => {
-        // Fallback: Provide contact information
-        const contactMessage = `Resume is currently being updated. 
-        
-Please reach out to me directly:
-📧 Email: vatsalbhavsar2011@gmail.com
-💼 LinkedIn: linkedin.com/in/vatsal-bhavsar-3b30092a7/
-🔗 GitHub: github.com/Vatsal1805
-
-I'll be happy to share my latest resume with you!`;
-        
-        if (confirm(contactMessage + "\n\nWould you like to send me an email now?")) {
-          scrollToSection("contact");
-        }
-      });
+    // Track resume view with analytics
+    track('Resume Viewed', { 
+      source: 'Hero Button',
+      format: 'Google Drive',
+      destination: 'Google Docs'
+    });
+    
+    // Open Google Drive resume in new tab
+    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -88,14 +70,14 @@ I'll be happy to share my latest resume with you!`;
                 onClick={() => {
                   track('Hero CTA Clicked', { 
                     button: 'My Resume',
-                    destination: 'resume_download'
+                    destination: 'google_drive_resume'
                   });
-                  handleResumeDownload();
+                  handleResumeView();
                 }} 
                 className="text-lg px-6 py-4 hover:bg-primary/10 border-primary/50 hover:border-primary group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
               >
                 <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                My Resume
+                View Resume
               </Button>
               <Button 
                 variant="outline" 
