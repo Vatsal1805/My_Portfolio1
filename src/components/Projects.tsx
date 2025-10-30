@@ -42,14 +42,24 @@ const Projects = () => {
     },
     {
       title: "Zomato Reel Clone",
-      description: "A MERN full-stack web app with TikTok-style food video feed, secure user authentication, and responsive design.",
+      description: "A MERN full-stack web app with TikTok-style food video feed, secure user authentication, and responsive design.(Best viewed in mobile format).",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
       gradient: "from-yellow-500/20 to-red-500/20",
       category: "Full-Stack",
       coverImage: zomatoReelImage,
       githubUrl: "https://github.com/Vatsal1805/Zomato-Reel",
-      liveUrl: "#"
+      liveUrl: "https://zomato-reel-sepia.vercel.app/"
     },
+    {
+  title: "Hospital Appointment Booking System",
+  description: "A web application developed using Node.js and Express.js for scheduling doctor appointments, featuring a user-friendly interface and efficient backend management.",
+  tech: ["Node.js", "Express.js", "MongoDB", "JavaScript"],
+  gradient: "from-teal-500/20 to-blue-500/20",
+  category: "Backend",
+  coverImage: hospitalAppointmentImage,
+  githubUrl: "https://github.com/Vatsal1805/Hospital_appointment",
+  liveUrl: "#"
+},
     {
       title: "Obys Agency Portfolio Clone",
       description: "A modern, interactive portfolio website inspired by the award-winning Obys Agency design. Features advanced web animations, smooth scrolling, and interactive elements using cutting-edge web technologies.",
@@ -113,16 +123,7 @@ const Projects = () => {
   githubUrl: "https://github.com/Vatsal1805/Pinterest-Cards",
   liveUrl: "https://vatsal1805.github.io/Pinterest-Cards/"
 },
-{
-  title: "Hospital Appointment Booking System",
-  description: "A web application developed using Node.js and Express.js for scheduling doctor appointments, featuring a user-friendly interface and efficient backend management.",
-  tech: ["Node.js", "Express.js", "MongoDB", "JavaScript"],
-  gradient: "from-teal-500/20 to-blue-500/20",
-  category: "Backend",
-  coverImage: hospitalAppointmentImage,
-  githubUrl: "https://github.com/Vatsal1805/Hospital_appointment",
-  liveUrl: "#"
-}
+
 
 
   ];
