@@ -59,7 +59,7 @@ const Projects = () => {
   category: "Full-Stack",
   coverImage: socialMediaAnalyzerImage,
   githubUrl: "https://github.com/Vatsal1805/SOCIAL-MEDIA-ANALYZER",
-  liveUrl: "https://social-media-analyzer-33hq.onrender.com"
+  liveUrl: "https://social-media-analyzer-three.vercel.app/"
 },
     {
   title: "Hospital Appointment Booking System",
