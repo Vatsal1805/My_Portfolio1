@@ -1,0 +1,69 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="socialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#socialGrad)"/>
+  
+  <!-- Main Analysis Dashboard -->
+  <rect x="50" y="30" width="300" height="140" fill="#1e293b" opacity="0.8" rx="12"/>
+  
+  <!-- Header -->
+  <rect x="60" y="40" width="80" height="8" fill="#3b82f6" opacity="0.7" rx="4"/>
+  <rect x="150" y="40" width="60" height="8" fill="#3b82f6" opacity="0.5" rx="4"/>
+  
+  <!-- Score Circle -->
+  <circle cx="100" cy="80" r="25" fill="#3b82f6" opacity="0.6"/>
+  <text x="100" y="85" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">85</text>
+  
+  <!-- Analysis Cards -->
+  <rect x="140" y="60" width="70" height="30" fill="#3b82f6" opacity="0.4" rx="6"/>
+  <rect x="220" y="60" width="70" height="30" fill="#1e293b" opacity="0.6" rx="6"/>
+  <rect x="300" y="60" width="40" height="30" fill="#3b82f6" opacity="0.3" rx="6"/>
+  
+  <!-- Sentiment Indicators -->
+  <circle cx="150" cy="105" r="6" fill="#10b981" opacity="0.8"/>
+  <circle cx="170" cy="105" r="6" fill="#3b82f6" opacity="0.8"/>
+  <circle cx="190" cy="105" r="6" fill="#ef4444" opacity="0.6"/>
+  
+  <!-- Keywords/Tags -->
+  <rect x="220" y="100" width="30" height="12" fill="#3b82f6" opacity="0.5" rx="6"/>
+  <rect x="255" y="100" width="25" height="12" fill="#1e293b" opacity="0.6" rx="6"/>
+  <rect x="285" y="100" width="35" height="12" fill="#3b82f6" opacity="0.4" rx="6"/>
+  
+  <!-- Progress Bars -->
+  <rect x="60" y="125" width="100" height="4" fill="#334155" opacity="0.6" rx="2"/>
+  <rect x="60" y="125" width="75" height="4" fill="#3b82f6" opacity="0.8" rx="2"/>
+  
+  <rect x="60" y="135" width="100" height="4" fill="#334155" opacity="0.6" rx="2"/>
+  <rect x="60" y="135" width="60" height="4" fill="#10b981" opacity="0.7" rx="2"/>
+  
+  <rect x="60" y="145" width="100" height="4" fill="#334155" opacity="0.6" rx="2"/>
+  <rect x="60" y="145" width="90" height="4" fill="#3b82f6" opacity="0.6" rx="2"/>
+  
+  <!-- File Upload Icon -->
+  <rect x="220" y="125" width="25" height="20" fill="#3b82f6" opacity="0.4" rx="4"/>
+  <rect x="225" y="120" width="15" height="15" fill="#1e293b" opacity="0.6" rx="2"/>
+  <polygon points="232,115 230,118 234,118" fill="#3b82f6" opacity="0.7"/>
+  
+  <!-- Social Media Icons -->
+  <circle cx="270" cy="135" r="8" fill="#1da1f2" opacity="0.6"/>
+  <rect x="290" y="127" width="16" height="16" fill="#1877f2" opacity="0.6" rx="3"/>
+  <circle cx="320" cy="135" r="8" fill="#e4405f" opacity="0.6"/>
+  
+  <!-- Analytics Chart Lines -->
+  <polyline points="60,160 80,155 100,150 120,145 140,140 160,145 180,135" 
+            fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.7"/>
+  <polyline points="200,160 220,155 240,150 260,145 280,140 300,145 320,140" 
+            fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="30" cy="50" r="8" fill="#3b82f6" opacity="0.3"/>
+  <rect x="20" y="80" width="20" height="3" fill="#1e293b" opacity="0.5" rx="2"/>
+  <circle cx="370" cy="60" r="10" fill="#1e293b" opacity="0.4"/>
+  <rect x="360" y="90" width="25" height="3" fill="#3b82f6" opacity="0.5" rx="2"/>
+  
+  <text x="200" y="190" font-family="Arial, sans-serif" font-size="14" fill="#3b82f6" text-anchor="middle" opacity="0.8">Social Media Analyzer</text>
+</svg>

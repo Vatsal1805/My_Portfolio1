@@ -13,6 +13,7 @@ import layout3Image from "@/assets/projects/layout-3.svg";
 import layout4Image from "@/assets/projects/layout-4.svg";
 import pinterestCardsImage from "@/assets/projects/pinterest-cards.svg";
 import hospitalAppointmentImage from "@/assets/projects/hospital-appointment.svg";
+import socialMediaAnalyzerImage from "@/assets/projects/social-media-analyzer.svg";
 
 interface Project {
   title: string;
@@ -50,6 +51,16 @@ const Projects = () => {
       githubUrl: "https://github.com/Vatsal1805/Zomato-Reel",
       liveUrl: "https://zomato-reel-sepia.vercel.app/"
     },
+    {
+  title: "Social Media Content Analyzer",
+  description: "AI-powered full-stack application that analyzes social media content and provides intelligent suggestions to improve engagement. Features file upload, OCR, sentiment analysis, and Google Gemini AI integration.",
+  tech: ["React", "Node.js", "Express", "MongoDB", "Google Gemini AI", "Tesseract.js", "Vite"],
+  gradient: "from-blue-500/20 to-slate-700/20",
+  category: "Full-Stack",
+  coverImage: socialMediaAnalyzerImage,
+  githubUrl: "https://github.com/Vatsal1805/SOCIAL-MEDIA-ANALYZER",
+  liveUrl: "https://social-media-analyzer-33hq.onrender.com"
+},
     {
   title: "Hospital Appointment Booking System",
   description: "A web application developed using Node.js and Express.js for scheduling doctor appointments, featuring a user-friendly interface and efficient backend management.",
@@ -123,8 +134,6 @@ const Projects = () => {
   githubUrl: "https://github.com/Vatsal1805/Pinterest-Cards",
   liveUrl: "https://vatsal1805.github.io/Pinterest-Cards/"
 },
-
-
 
   ];
 
