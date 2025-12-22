@@ -8,7 +8,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Hero = () => {
   const handleResumeView = () => {
     // TODO: Replace this with your actual Google Drive link
-    const googleDriveResumeUrl = "https://docs.google.com/document/d/10jCy1bP0kZyuB18NFZgCBfkEUgCdJpex/edit?usp=sharing&ouid=110460681303891691184&rtpof=true&sd=true";
+    const googleDriveResumeUrl = "https://drive.google.com/file/d/1QIjkxeQ3YJ1u0OR_jJ_bxVPYRqh3uhoM/view?usp=drive_link";
     
     // For now, using a placeholder - you'll need to replace with your actual Google Drive link
     const resumeUrl = googleDriveResumeUrl;
