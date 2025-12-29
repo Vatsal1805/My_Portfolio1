@@ -14,6 +14,7 @@ import layout4Image from "@/assets/projects/layout-4.svg";
 import pinterestCardsImage from "@/assets/projects/pinterest-cards.svg";
 import hospitalAppointmentImage from "@/assets/projects/hospital-appointment.svg";
 import socialMediaAnalyzerImage from "@/assets/projects/social-media-analyzer.svg";
+import apnisecImage from "@/assets/projects/apnisec.svg";
 
 interface Project {
   title: string;
@@ -42,16 +43,6 @@ const Projects = () => {
       liveUrl: "#"
     },
     {
-      title: "Zomato Reel Clone",
-      description: "A MERN full-stack web app with TikTok-style food video feed, secure user authentication, and responsive design.(Best viewed in mobile format).",
-      tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-      gradient: "from-yellow-500/20 to-red-500/20",
-      category: "Full-Stack",
-      coverImage: zomatoReelImage,
-      githubUrl: "https://github.com/Vatsal1805/Zomato-Reel",
-      liveUrl: "https://zomato-reel-sepia.vercel.app/"
-    },
-    {
   title: "Social Media Content Analyzer",
   description: "AI-powered full-stack application that analyzes social media content and provides intelligent suggestions to improve engagement. Features file upload, OCR, sentiment analysis, and Google Gemini AI integration.",
   tech: ["React", "Node.js", "Express", "MongoDB", "Google Gemini AI", "Tesseract.js", "Vite"],
@@ -61,6 +52,28 @@ const Projects = () => {
   githubUrl: "https://github.com/Vatsal1805/SOCIAL-MEDIA-ANALYZER",
   liveUrl: "https://social-media-analyzer-three.vercel.app/"
 },
+    {
+  title: "ApniSec – Cybersecurity Issue Management Platform",
+  description: "Professional cybersecurity issue tracking platform built with strict OOP principles for security teams to efficiently manage incidents, assessments, and VAPT. Features JWT authentication, dashboard analytics, advanced filtering, and 100% Lighthouse SEO score with modern dark theme.",
+  tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcrypt", "Tailwind CSS", "Axios"],
+  gradient: "from-emerald-500/20 to-slate-700/20",
+  category: "Full-Stack",
+  coverImage: apnisecImage,
+  githubUrl: "https://github.com/Vatsal1805/Issue_Tracker",
+  liveUrl: "https://issue-tracker-ashy-nine.vercel.app"
+},
+
+    {
+      title: "Zomato Reel Clone",
+      description: "A MERN full-stack web app with TikTok-style food video feed, secure user authentication, and responsive design.(Best viewed in mobile format).",
+      tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+      gradient: "from-yellow-500/20 to-red-500/20",
+      category: "Full-Stack",
+      coverImage: zomatoReelImage,
+      githubUrl: "https://github.com/Vatsal1805/Zomato-Reel",
+      liveUrl: "https://zomato-reel-sepia.vercel.app/"
+    },
+    
     {
   title: "Hospital Appointment Booking System",
   description: "A web application developed using Node.js and Express.js for scheduling doctor appointments, featuring a user-friendly interface and efficient backend management.",
